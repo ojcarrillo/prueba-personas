@@ -1,0 +1,121 @@
+{
+	"info": {
+		"_postman_id": "50fb9922-0717-485d-a4ed-0f3bc844f6eb",
+		"name": "postman_personas_api",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "listar",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8181/personas/api/personas",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8181",
+					"path": [
+						"personas",
+						"api",
+						"personas"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "guardar",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"dni\": \"1991102\",\r\n    \"nombres\": \"odaimar\",\r\n    \"apellidos\": \"carrillo\",\r\n    \"esEmpleado\": false\r\n}"
+				},
+				"url": {
+					"raw": "http://localhost:8181/personas/api/personas",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8181",
+					"path": [
+						"personas",
+						"api",
+						"personas"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "actualizar",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"dni\": \"1991102\",\r\n    \"nombres\": \"odaimar\",\r\n    \"apellidos\": \"carrillo barrera\",\r\n    \"esEmpleado\": true\r\n}"
+				},
+				"url": {
+					"raw": "http://localhost:8181/personas/api/personas/1991102",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8181",
+					"path": [
+						"personas",
+						"api",
+						"personas",
+						"1991102"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "eliminar",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:8181/personas/api/personas/1991102",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8181",
+					"path": [
+						"personas",
+						"api",
+						"personas",
+						"1991102"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
